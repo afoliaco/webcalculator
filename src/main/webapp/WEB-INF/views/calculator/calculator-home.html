@@ -3,8 +3,9 @@
 <head>
     <title>Welcome to the Spring MVC Quickstart application! Get started quickly by signing up!</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
-    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}" />
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen"
+          th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}"/>
     <script src="../../../resources/js/jquery.min.js" th:src="@{/resources/js/jquery.min.js}"></script>
     <script src="../../../resources/js/bootstrap.min.js" th:src="@{/resources/js/bootstrap.min.js}"></script>
 </head>
@@ -16,18 +17,33 @@
     </div>
     <form class="form-narrow form-horizontal" action="#" method="post" th:action="@{calculator/execute}">
         <fieldset>
-            <legend>Please Sign In</legend>
+            <legend>Input the numbers for calculation</legend>
             <div class="form-group">
                 <label for="inputA" class="col-lg-2 control-label">Input&nbspA</label>
                 <div class="col-lg-10">
-                    <input type="text" class="form-control" id="inputA" placeholder="inputA" name="inputA" />
+                    <input type="text" class="form-control" id="inputA" placeholder="inputA" name="inputA"/>
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputB" class="col-lg-2 control-label">Input&nbspB</label>
                 <div class="col-lg-10">
-                    <input type="text" class="form-control" id="inputB" placeholder="inputB" name="inputB" />
+                    <input type="text" class="form-control" id="inputB" placeholder="inputB" name="inputB"/>
                 </div>
+            </div>
+            <div class="form-group btn-group colors" data-toggle="buttons">
+                <label class="btn btn-primary active">
+                    <input type="radio" name="Operation" value="+" autocomplete="off" checked>Addition
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="Operation" value="-" autocomplete="off">Substation
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="Operation" value="*" autocomplete="off"> Multiplication
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="Operation" value="/" autocomplete="off"> Division
+                </label>
+
             </div>
             <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10">
