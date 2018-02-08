@@ -1,6 +1,8 @@
 package com.esama.calculator;
 
-public interface ICalculator {
+import org.springframework.stereotype.Service;
+
+public interface CalculatorInterface {
 
     long Sum(long a, long b);
 
